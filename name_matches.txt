@@ -1,0 +1,149 @@
+src/core/entities/workflows/rules.ts:16:    const id = `rule_${now}_${rule.name.replace(/\s+/g, '_').toLowerCase()}`;
+src/core/entities/workflows/rules.ts:54:    const nameMatch = condition.match(/entity\.name\s*==\s*['"]([^'"]+)['"]/);
+src/core/entities/workflows/rules.ts:57:      return entity.metadata?.name === name;
+src/core/entities/workflows/rules.ts:72:        if (!code.includes(`entity: ${entity.metadata?.name}`)) {
+src/core/entities/workflows/rules.ts:73:          code = `entity: ${entity.metadata?.name || entity.id}\n  ${code.split('\n').join('\n  ')}`;
+src/core/entities/presets/entityPresetManager.ts:37:    const id = `preset_${now}_${data.name.replace(/\s+/g, '_').toLowerCase()}`;
+src/core/entities/split.ts:115:      name: `${entity.metadata?.name || 'Unknown'} (Split)`,
+src/core/cache/entityCache.ts:22:          store.createIndex('by_name', 'metadata.name', { unique: false });
+src/core/cache/previewCache.ts:63:    return `${file.name}-${file.size}-${file.lastModified}`;
+src/core/pipeline/import/importManager.ts:25:        console.error(`Failed to import ${file.name}:`, error);
+src/core/pipeline/import/fileRouter.ts:7:  const ext = file.name.split('.').pop()?.toLowerCase();
+src/core/pipeline/import/previewExtractor.ts:29:      console.error(`[PreviewExtractor] Failed to extract preview for ${file.name}:`, error);
+src/core/pipeline/import/importQueue.ts:29:      console.error(`Failed to import ${file.name}:`, err);
+src/core/pipeline/import/rebuildRegistry.ts:62:      currentFile: file.name,
+src/core/pipeline/import/rebuildRegistry.ts:72:          currentFile: file.name,
+src/core/pipeline/import/rebuildRegistry.ts:90:      console.error(`[Rebuild] Failed to process ${file.name}:`, error);
+src/core/pipeline/import/aiTrigger.ts:9:      console.log(`[AI Trigger] Enqueued AI processing for ${asset.file.name}`);
+src/core/pipeline/import/aiTrigger.ts:12:      console.error(`[AI Trigger] Failed for ${asset.file.name}:`, err);
+src/core/pipeline/import/fileType.ts:2:  const ext = file.name.split('.').pop()?.toLowerCase() || '';
+src/core/pipeline/import/importOrchestrator.ts:199:      while (existingFiles.some(f => f.name === safeFilename)) {
+src/core/pipeline/import/importOrchestrator.ts:210:      throw new Error(`Integrity check failed for ${file.name}`);
+src/core/collections/performanceTest.ts:29:    console.log(`Query "${collection.name}": found ${result.length} assets in ${(end - start).toFixed(2)}ms`);
+src/core/photocode/compiler.ts:41:          let type = node.name || '';
+src/core/photocode/compiler.ts:58:            const newPrefix = prefix ? `${prefix}.${node.name}` : node.name || '';
+src/core/photocode/compiler.ts:68:                  const key = (child.name || '').toLowerCase();
+src/core/photocode/compiler.ts:88:              processNodes(node.children, newPrefix, isTarget(node.name) ? node.name : target);
+src/core/photocode/compiler.ts:102:          type: node.name || '',
+src/core/photocode/compiler.ts:111:          const normalizedPrefix = (node.name || '').toLowerCase().replace(/\s+/g, '');
+src/core/photocode/compiler.ts:120:                const key = (child.name || '').toLowerCase();
+src/core/photocode/compiler.ts:127:            ) || node.name || '';
+src/core/photocode/compiler.ts:132:              target: isTarget(node.name) ? node.name : undefined,
+src/core/photocode/compiler.ts:140:            processNodes(node.children, node.name || '', isTarget(node.name) ? node.name : undefined);
+src/core/photocode/compiler.ts:156:                  let type = child.name || '';
+src/core/photocode/compiler.ts:170:                  const newPrefix = prefix ? `${prefix}.${child.name}` : child.name || '';
+src/core/photocode/compiler.ts:171:                  processEntityNodes(child.children, newPrefix, child.name);
+src/core/photocode/compiler.ts:185:                type: child.name || '',
+src/core/photocode/compiler.ts:203:                type: child.name || '',
+src/core/photocode/router.ts:9:    return { engine: feature.engine.name, method: feature.engine.method };
+src/core/photocode/validator.ts:15:      if (!node.name) continue;
+src/core/photocode/validator.ts:17:      const normalizedName = normalize(node.name);
+src/core/photocode/validator.ts:30:        const keyToGuard = NORMALIZED_OPERATIONS.includes(fullPath) ? fullPath : node.name;
+src/core/photocode/validator.ts:40:          throw new Error(`Invalid target: ${node.name}`);
+src/core/runtime/orchestrator.ts:90:    const fileName = file.name;
+src/core/runtime/orchestrator.ts:91:    const filePath = file.webkitRelativePath || file.name;
+src/core/dam/searchIndex.ts:83:      if (entity && entity.name) {
+src/core/dam/searchIndex.ts:84:        personNames.push(entity.name);
+src/core/dam/import/folderResolver.ts:22:  const originalName = file.name;
+src/core/face/faceEntityEngine.ts:72:    name: entityA.name || entityB.name,
+src/core/system/featureValidator.ts:8:    if (!feature.engine || !feature.engine.name) {
+src/core/fs/fileSystem.ts:13:          if (err.name === 'SecurityError' || err.message?.includes('Cross origin sub frames') || err.message?.includes('user activation')) {
+src/core/fs/fileSystem.ts:39:        files.push(entry.name);
+src/core/fs/fileSystem.ts:69:        const fileHandle = await this.directoryHandle.getFileHandle(entry.name);
+src/core/engines/image/libraw.ts:29:    console.log(`[LibRaw] Decoding ${file.name}...`);
+src/core/engines/image/libraw.ts:39:      console.log(`[LibRaw] Attempting to extract preview for ${file.name}`);
+src/core/engines/image/libraw.ts:42:        console.log(`[LibRaw] Successfully extracted embedded preview for ${file.name}`);
+src/core/engines/image/libraw.ts:45:        console.warn(`[LibRaw] No embedded preview found for ${file.name}`);
+src/core/engines/image/libraw.ts:53:      console.warn(`[LibRaw] Failed to extract preview/metadata via exifr for ${file.name}`, err);
+src/core/engines/color/lcms.ts:24:    console.log(`[ColorManagement] Applying transform from ${input.name} to ${output.name}`);
+src/core/search/semanticSearch.ts:41:        const matchedPeople = people.filter(p => p.name && p.name.toLowerCase().includes(personName));
+src/core/search/semanticSearch.ts:160:          const matchedPeople = people.filter(p => p.name && p.name.toLowerCase().split(/\s+/).includes(word));
+src/apps/web/ui/editor/HistoryPanel.tsx:89:    let label = v.name || (v.delta && v.delta.length > 0 ? v.delta[0].type : 'Original');
+src/apps/web/ui/editor/HistoryPanel.tsx:209:                <span>{v.name || 'Snapshot'}</span>
+src/apps/web/ui/people/PersonDetailView.tsx:27:  const [newName, setNewName] = useState(person.name || '');
+src/apps/web/ui/people/PersonDetailView.tsx:72:    if (newName.trim() && newName !== person.name) {
+src/apps/web/ui/people/PersonDetailView.tsx:178:                {person.name || 'Unnamed Person'}
+src/apps/web/ui/people/PersonDetailView.tsx:268:                      console.log("Merge with", p.name);
+src/apps/web/ui/people/PersonDetailView.tsx:273:                    Merge with {p.name || 'Unnamed'} ({(s.score * 100).toFixed(0)}%)
+src/apps/web/ui/people/FaceActionPanel.tsx:27:    return allPeople.filter(p => p.name?.toLowerCase().includes(q)).slice(0, 10);
+src/apps/web/ui/people/FaceActionPanel.tsx:169:                        {person.name?.[0] || '?'}
+src/apps/web/ui/people/FaceActionPanel.tsx:172:                        <div className="text-sm font-medium">{person.name || 'Unnamed'}</div>
+src/apps/web/ui/entity/WorkflowRulesPanel.tsx:66:                  <h4 className="font-bold text-slate-900">{template.name}</h4>
+src/apps/web/ui/entity/WorkflowRulesPanel.tsx:97:                    <h4 className="font-bold text-slate-900 mb-1">{rule.name}</h4>
+src/apps/web/ui/entity/ZODEntityPanel.tsx:47:      const finalCode = `entity: "${entity.metadata.name}"\n${code}`;
+src/apps/web/ui/entity/ZODEntityPanel.tsx:102:      console.log(`Saved as preset "${presetName}" and applied to ${updatedCount} photos of ${entity.metadata.name}!`);
+src/apps/web/ui/entity/ZODEntityPanel.tsx:126:          Target: {entity.metadata.name}
+src/apps/web/ui/entity/ZODEntityPanel.tsx:136:            placeholder={`e.g., "Make ${entity.metadata.name} look like a Vogue model"`}
+src/apps/web/ui/entity/EntityPresetPanel.tsx:54:      await generatePresetFromPrompt(aiPrompt, entityId, entity.metadata?.name || entityId);
+src/apps/web/ui/entity/EntityPresetPanel.tsx:187:                    <span className="text-sm text-slate-300 truncate pr-2">{preset.name}</span>
+src/apps/web/ui/entity/EntityPresetPanel.tsx:212:                  {preset.name}
+src/apps/web/ui/entity/EntityDetail.tsx:24:        setEditName(e.metadata?.name || 'Unknown');
+src/apps/web/ui/entity/EntityDetail.tsx:134:              alt={entity.metadata?.name || 'Unknown'}
+src/apps/web/ui/entity/EntityDetail.tsx:163:            <h2 className="text-2xl font-bold text-slate-900">{entity.metadata.name}</h2>
+src/apps/web/ui/entity/EntityBrowser.tsx:64:        e.metadata.name.toLowerCase().includes(lowerQuery) ||
+src/apps/web/ui/entity/EntityBrowser.tsx:80:          return a.metadata.name.localeCompare(b.metadata.name);
+src/apps/web/ui/entity/EntityBrowser.tsx:82:          return b.metadata.name.localeCompare(a.metadata.name);
+src/apps/web/ui/entity/EntityBrowser.tsx:114:                alt={entity.metadata?.name}
+src/apps/web/ui/entity/EntityBrowser.tsx:130:              {entity.metadata.name}
+src/apps/web/ui/entity/EntityAppearances.tsx:87:          {entity?.metadata.name} <span className="text-slate-400 font-normal text-sm">({assets.length} photos)</span>
+src/apps/web/ui/library/PeopleView.tsx:114:      (e.name?.toLowerCase().includes(query)) || 
+src/apps/web/ui/library/PeopleView.tsx:252:          {filteredEntities.length > 0 && filteredEntities.some(e => !e.name) && !searchQuery && (
+src/apps/web/ui/library/PeopleView.tsx:374:                      <h3 className={`font-medium truncate ${entity.name ? 'text-zinc-100' : 'text-zinc-400 italic'}`}>
+src/apps/web/ui/library/PeopleView.tsx:375:                        {entity.name || 'Unnamed Person'}
+src/apps/web/ui/library/SearchBar.tsx:144:      .filter(p => p.name && p.name.toLowerCase().startsWith(lastWord))
+src/apps/web/ui/library/SearchBar.tsx:145:      .map(p => `person:${p.name}`)
+src/apps/web/ui/library/DetailView.tsx:188:      a.download = `PhotoZOD_${asset.fileName || asset.file.name}`;
+src/apps/web/ui/library/DetailView.tsx:259:            <span className="font-bold text-white text-xs sm:text-sm truncate">{asset.fileName || asset.file.name}</span>
+src/apps/web/ui/library/DetailView.tsx:325:            alt={asset.fileName || asset.file.name}
+src/apps/web/ui/library/DetailView.tsx:438:                        <div className="font-medium text-sm text-zinc-200 group-hover:text-white">{preset.name}</div>
+src/apps/web/ui/library/DetailView.tsx:464:                    <SmartImage src={v?.thumbnailUrl} assetId={v?.assetId} className="w-full h-full object-cover" alt={v?.fileName || v?.file?.name} retryCount={3} />
+src/apps/web/ui/library/SmartCollectionsModal.tsx:199:                            {getIcon(collection.name)}
+src/apps/web/ui/library/SmartCollectionsModal.tsx:200:                            <span className="font-medium truncate">{collection.name}</span>
+src/apps/web/ui/library/SmartCollectionsModal.tsx:211:                                  if (confirm(`Delete collection "${collection.name}"?`)) {
+src/apps/web/ui/library/SmartCollectionsModal.tsx:246:                              <span className="font-medium truncate">{collection.name}</span>
+src/apps/web/ui/library/SmartCollectionsModal.tsx:257:                                    if (confirm(`Delete collection "${collection.name}"?`)) {
+src/apps/web/ui/library/CopyrightModal.tsx:279:                          <span className="text-zinc-400 truncate max-w-[150px]">{asset.file.name}</span>
+src/apps/web/ui/library/MetadataTaggingView.tsx:221:                      key={color.name}
+src/apps/web/ui/library/MetadataTaggingView.tsx:222:                      onClick={() => handleSetColor(color.name)}
+src/apps/web/ui/library/MetadataTaggingView.tsx:224:                        currentAsset.colorTag === color.name ? 'scale-110' : 'hover:scale-105 active:scale-95'
+src/apps/web/ui/library/MetadataTaggingView.tsx:229:                          currentAsset.colorTag === color.name 
+src/apps/web/ui/library/MetadataTaggingView.tsx:232:                        } ${color.name === 'none' ? 'bg-zinc-800 border-zinc-700 border-dashed' : ''}`}
+src/apps/web/ui/library/MetadataTaggingView.tsx:233:                        style={{ backgroundColor: color.name !== 'none' ? color.hex : undefined }}
+src/apps/web/ui/library/MetadataTaggingView.tsx:236:                        currentAsset.colorTag === color.name ? 'text-white' : 'text-zinc-600 group-hover:text-zinc-400'
+src/apps/web/ui/library/MetadataTaggingView.tsx:342:                    style={{ backgroundColor: COLORS.find(c => c.name === asset.colorTag)?.hex }}
+src/apps/web/ui/library/FilterPresets.tsx:135:            {activePreset ? (isPresetDirty ? `${activePreset.name}*` : activePreset.name) : 'Presets'}
+src/apps/web/ui/library/FilterPresets.tsx:185:                            <span className="font-bold text-sm">{preset.name}</span>
+src/apps/web/ui/library/FilterPresets.tsx:273:            {activePreset ? (isPresetDirty ? `${activePreset.name} (modified)` : activePreset.name) : 'Presets'}
+src/apps/web/ui/library/FilterPresets.tsx:322:                          <span className="truncate">{preset.name}</span>
+src/apps/web/ui/library/FilterPresets.tsx:410:          setName(preset.name);
+src/apps/web/ui/library/GridView.tsx:144:            alt={asset.fileName || asset.file?.name}
+src/apps/web/ui/library/GridView.tsx:208:            <span className="truncate">{asset.fileName || asset.file?.name}</span>
+src/apps/web/ui/library/GridView.tsx:618:      if (file.name.toLowerCase().endsWith('.zip') || file.type === 'application/zip' || file.type === 'application/x-zip-compressed') {
+src/apps/web/ui/library/GridView.tsx:619:        setImportProgress({ fileName: `Extracting ${file.name}...`, progress: 0, status: 'Extracting ZIP' });
+src/apps/web/ui/library/GridView.tsx:637:          errors.push(`Failed to extract ${file.name}`);
+src/apps/web/ui/library/GridView.tsx:641:        const ext = file.name.split('.').pop()?.toLowerCase();
+src/apps/web/ui/library/GridView.tsx:676:          if (err.name === 'SecurityError' || err.message?.includes('Cross origin sub frames') || err.message?.includes('user activation')) {
+src/apps/web/ui/library/GridView.tsx:679:          } else if (err.name !== 'AbortError') {
+src/apps/web/ui/library/GridView.tsx:784:      batchEngine.applyBatch(targetAssetIds, convertToEditOps(ops), selectedPresetId ? presets.find(p => p.id === selectedPresetId)?.name : batchInstruction);
+src/apps/web/ui/library/GridView.tsx:1038:                      {getCollectionIcon(collection.name)}
+src/apps/web/ui/library/GridView.tsx:1040:                    <span className="text-sm font-bold truncate">{collection.name}</span>
+src/apps/web/ui/library/GridView.tsx:1066:                        <span className="text-sm font-bold truncate">{collection.name}</span>
+src/apps/web/ui/library/GridView.tsx:1078:                          if (confirm(`Delete collection "${collection.name}"?`)) {
+src/apps/web/ui/library/GridView.tsx:1128:              {getCollectionIcon(collection.name)}
+src/apps/web/ui/library/GridView.tsx:1129:              {collection.name}
+src/apps/web/ui/library/GridView.tsx:1359:                          key={color.name}
+src/apps/web/ui/library/GridView.tsx:1360:                          onClick={() => handleBulkColor(color.name === 'none' ? null : color.name)}
+src/apps/web/ui/library/GridView.tsx:1362:                            (commonMetadata.color === color.name || (color.name === 'none' && commonMetadata.color === null))
+src/apps/web/ui/library/GridView.tsx:1369:                              (commonMetadata.color === color.name || (color.name === 'none' && commonMetadata.color === null))
+src/apps/web/ui/library/GridView.tsx:1372:                            } ${color.name === 'none' ? 'bg-zinc-800 border-zinc-700 border-dashed' : ''}`}
+src/apps/web/ui/library/GridView.tsx:1373:                            style={{ backgroundColor: color.name !== 'none' ? color.hex : undefined }}
+src/apps/web/ui/library/GridView.tsx:1376:                            (commonMetadata.color === color.name || (color.name === 'none' && commonMetadata.color === null))
+src/apps/web/ui/library/GridView.tsx:2088:                      {preset.name}
+src/apps/web/ui/versioning/BatchPanel.tsx:46:                  <h4 className="text-xs font-bold text-zinc-100 truncate pr-2" title={batch.name}>
+src/apps/web/ui/versioning/BatchPanel.tsx:47:                    {batch.name}
+src/apps/web/editor/EntityEditor.tsx:24:        setCode(`entity: "${e.metadata.name}"\n  `);
+src/apps/web/editor/EntityEditor.tsx:45:    console.log(`[EntityEditor] Applying code to ${entity.metadata.name}:`, code);
+src/apps/web/editor/EntityEditor.tsx:80:      console.log(`Applied edits to ${updatedCount} photos of ${entity.metadata.name}!`);
+src/apps/web/editor/EntityEditor.tsx:86:      const presetName = prompt("Enter a name for this preset:", `Preset for ${entity.metadata.name}`);
+src/apps/web/editor/EntityEditor.tsx:96:      console.log(`Saved as preset "${presetName}" and bound to ${entity.metadata.name}!`);
+src/apps/web/editor/EntityEditor.tsx:120:          Target: {entity.metadata.name}

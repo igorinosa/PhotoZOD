@@ -1,0 +1,5 @@
+{
+  "name": "PhotoZOD",
+  "description": "A browser-based, AI-native photography operating system where every image is represented as a structured, editable state.",
+  "requestFramePermissions": []
+}
